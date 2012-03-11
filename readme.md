@@ -2,10 +2,18 @@
 
 Convert image url to SVG path
 
-#how do I use this?
+##install
 
-Install dependencies
 
 ```
-  npm install
+  npm install vectogram
 ```
+
+##how do I use this?
+
+```javascript
+var Vectogram = require('vectogram');
+
+new Vectogram(80) //listen on port 80
+```
+  
