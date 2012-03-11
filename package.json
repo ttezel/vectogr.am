@@ -1,0 +1,19 @@
+{
+    "name": "vectogram"
+  , "description": "Image to SVG conversion server"
+  , "version": "0.0.1"
+  , "author": "Tolga Tezel"
+  , "keywords": ["image", "svg"]
+  , "dependencies": { 
+    "easyimage": ">=0.0.4" 
+  }
+  , "devDependencies": {
+
+  }
+  , "engines": { "node": ">=0.6.0" }
+  , "main": "./lib/server"
+  , "repository": {
+        "type": "git"
+      , "url": "http://github.com/ttezel/vectogr.am.git"
+    }
+}
