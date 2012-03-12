@@ -15,7 +15,13 @@ Client.prototype.makeRequest = function (apiKey, authHash, imgUrl) {
   this.opts.path = '/' + apiKey + '/' + authHash + '/' + imgUrl;
 
   var req =  http.get(this.opts, function (res) {
-    console.log('client got response', res)
+    var reply = '';
+    res.on('data', function (chunk) {
+      reply += chunk;
+    });
+    res.on('end', function () {
+      console.log('CLIENT: reply', reply)
+    });
   });
 
   req.on('error', function (e) {
@@ -29,4 +35,4 @@ Client.prototype.makeRequest = function (apiKey, authHash, imgUrl) {
 var server = new Server()
   , client = new Client();
 
-client.makeRequest('foo', 'bar', 'http://findicons.com/files/icons/1306/nc_lighthouses/128/currituck_beach.png');
+client.makeRequest('foo', 'bar', 'http://jquery.com/demo/thickbox/images/plant4.jpg');
