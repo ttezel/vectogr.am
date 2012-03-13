@@ -27,7 +27,7 @@ Resource:
 
 * `GET` `http://server_url.com/url_to_image`
 
-parameters:
+parameter:
 
 * `pathonly` (optional - defaults to `false`)
 
@@ -57,7 +57,7 @@ var request = http.get(options, function (res) {
   });
 });
 
-req.on('error', function (e) {
+request.on('error', function (e) {
   console.log('http client error:', e)
 });
 
