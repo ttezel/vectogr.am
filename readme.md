@@ -1,6 +1,6 @@
 #vectogr.am
 
-API to convert image url to SVG path
+API to convert image url to SVG path over http.
 
 ##install
 
@@ -21,11 +21,11 @@ var options = { port: 80, host: '127.0.0.1' };
 var server = new Vectogram(options) //start up the server
 ```
 
-now you can make http requests to the server.
+now you can make http requests to this server.
 
 Resource:
 
-* `GET` `http://server_url.com/url_to_image`
+* `GET` `http://127.0.0.1/url_to_image`
 
 parameter:
 
