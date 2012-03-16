@@ -44,7 +44,7 @@ var http = require('http');
 var options = { 
   host: '127.0.0.1'
 , port: 80
-, path: 'http://jquery.com/demo/thickbox/images/plant4.jpg'
+, path: '/v1/' + 'http://www.google.com/images/srpr/logo3w.png'
 };
 
 var request = http.get(options, function (res) {
@@ -53,7 +53,7 @@ var request = http.get(options, function (res) {
     reply += chunk;
   });
   res.on('end', function () {
-    console.log('CLIENT: reply', reply)
+    console.log(reply);
   });
 });
 
