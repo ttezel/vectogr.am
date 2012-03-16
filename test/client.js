@@ -38,10 +38,12 @@ function checkJSON (err, statusCode, reply) {
     },
     Error
   );
+  console.log('passed checkJSON');
 };
 
 function checkJSONP (err, statusCode, reply) {
   assert.equal(statusCode, 200);
+  console.log('passed checkJSONP');
 };
 
 //
