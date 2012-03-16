@@ -48,13 +48,11 @@ function checkJSONP (err, statusCode, reply) {
 //tests
 //
 
-var opts = { port: 8000, host: '127.0.0.1' };
+var opts = { port: 8002, host: '127.0.0.1' };
 
 var server = new Vectogram(opts)
   , client = new Client(opts);
 
 client.makeRequest('http://jquery.com/demo/thickbox/images/plant4.jpg', { pathonly: 'true' }, checkJSON);
 client.makeRequest('http://www.google.com/images/srpr/logo3w.png', { pathonly: 'false' }, checkJSON);
-
-client.makeRequest('http://jquery.com/demo/thickbox/images/plant4.jpg', { pathonly: 'true', callback: 'myCallback' }, checkJSONP);
-client.makeRequest('http://www.google.com/images/srpr/logo3w.png', { pathonly: 'false', callback: 'myCallback' }, checkJSONP);
+client.makeRequest('http://www.google.com/images/srpr/logo3w.png', { pathonly: 'true', callback: 'myCallback' }, checkJSONP);
